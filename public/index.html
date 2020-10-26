@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>출퇴근 보고 생성기</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="comtimeManager.js"></script>
+        <script src="dateFormater.js"></script>
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+        <div class="leftNav">            
+            <div class="comtime">
+                <h3>출근시간</h3>
+                <input type="text" id="comtime_viewer">
+                <div>
+                    <div class="controller">
+                        <button>현재 시간으로 갱신</button>
+                        <button>적은대로 바꾸기</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="manual">
+                <h3>메뉴얼</h3>
+
+                <p>{date} : 현재 날짜를 표시해 줍니다. ex : 12월 25일</p>
+                <p>{checkin} : 출근 시간을 표시해 줍니다. ex : 07:00</p>
+                <p>{checkout} : 퇴근 시간을 표시해 줍니다. (기본적으로 현재 시간입니다.)</p>
+
+            </div>
+        </div>
+        <div class="content">
+
+            <!-- <div class="search">
+                <label for="search">검색란 : </label>
+                <input type="text" id="search">
+                <button id="sumbit">검색</button>
+
+                <button onclick="save()" style="float: right;">저장</button>
+            </div> -->
+            <div class="logger">
+                <textarea id="logger" 
+                placeholder="{date} 출퇴근보고 &#13;&#10;출근시간 : {checkin}&#13;&#10;퇴근시간 : {checkout}" 
+                onkeyup="log()"></textarea>
+            </div>
+            <div class="result">
+                <textarea id="result" 
+                placeholder="10월 20일 출퇴근보고 &#13;&#10;출근시간 : 7:00&#13;&#10;퇴근시간 : 18:04" ></textarea>
+            </div>
+        </div>
+    </body>
+</html>
