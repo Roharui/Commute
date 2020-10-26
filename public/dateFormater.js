@@ -97,6 +97,13 @@ function save(){
     console.log(text)
 }
 
+function update(){
+    let time = CM.getComtime()
+
+    log()
+    $("#comtime_viewer").val(time)
+}
+
 $(document).ready(function(){
-    CM.getComtime()
+    update()
 })

@@ -20,15 +20,7 @@ const CM = {
         }
     
         sessionStorage.setItem("ComeTime", date);
-
-        this.update()
     
         return date
     },
-
-    update() {
-        let time = this.getComtime()
-
-        $("#comtime_viewer").val(time)
-    }
 }

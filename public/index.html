@@ -12,11 +12,9 @@
             <div class="comtime">
                 <h3>출근시간</h3>
                 <input type="text" id="comtime_viewer">
-                <div>
-                    <div class="controller">
-                        <button>현재 시간으로 갱신</button>
-                        <button>적은대로 바꾸기</button>
-                    </div>
+                <div class="controller">
+                    <button onclick="CM.setCometime();update()">현재 시간으로 갱신</button>
+                    <button onclick="CM.setCometime($('#comtime_viewer').val());update()">적은대로 바꾸기</button>
                 </div>
             </div>
 
