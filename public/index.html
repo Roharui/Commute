@@ -15,48 +15,56 @@
     </head>
     <body>
 
-        <!-- <div class="leftNav">            
-            <div class="comtime">
-                <h3>출근시간</h3>
-                <input type="text" id="comtime_viewer">
-                <div class="controller">
-                    <button onclick="CM.setCometime();update()">현재 시간으로 갱신</button>
-                    <button onclick="CM.setCometime($('#comtime_viewer').val());update()">적은대로 바꾸기</button>
-                </div>
-            </div>
-
-            <div class="manual">
-                <h3>메뉴얼</h3>
-
-                <p>{date} : 현재 날짜를 표시해 줍니다. <br> ex : 12월 25일</p>
-                <p>{checkin} : 출근 시간을 표시해 줍니다. <br> ex : 07:00</p>
-                <p>{checkout} : 퇴근 시간을 표시해 줍니다. (기본적으로 현재 시간입니다.) <br> ex : 18:00</p>
+        <div class="navbar navbar-inverse navbar-fixed-top"> 
 
             </div>
-        </div> -->
-        <div class="container">
-            <div class="mt-2 p-3"></div>
-                <div class="w-100 form-inline">
-                    <label for="search">검색란</label>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <input type="text" id="search" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="comtime">
+                    <h3>출근시간</h3>
+                    <input type="text" id="comtime_viewer">
+                    <div class="controller">
+                            <button onclick="CM.setCometime();update()">현재 시간으로 갱신</button>
+                            <button onclick="CM.setCometime($('#comtime_viewer').val());update()">적은대로 바꾸기</button>
+                        </div>
                     </div>
-                    <button id="sumbit" class="btn btn-primary mb-2">검색</button>
 
-                    <button onclick="save()" class="btn btn-primary mb-2">저장</button>
+                    <div class="manual">
+                        <h3>메뉴얼</h3>
 
+                        <p>{date} : 현재 날짜를 표시해 줍니다. <br> ex : 12월 25일</p>
+                        <p>{checkin} : 출근 시간을 표시해 줍니다. <br> ex : 07:00</p>
+                        <p>{checkout} : 퇴근 시간을 표시해 줍니다. (기본적으로 현재 시간입니다.) <br> ex : 18:00</p>
+
+                    </div>
                 </div>
-                <div class="mt-3">
-                    <label for="logger"><h3>입력</h3></label>
-                    <textarea id="logger" class="form-control" style="resize: none;"
-                    placeholder="{date} 출퇴근보고 &#13;&#10;출근시간 : {checkin}&#13;&#10;퇴근시간 : {checkout}" 
-                    onkeyup="log()" rows="10"></textarea>
-                </div>
-                <div class="mt-2">
-                    <label for="result"><h3>결과</h3></label>
-                    <textarea id="result" class="form-control" style="resize: none;"
-                    placeholder="10월 20일 출퇴근보고 &#13;&#10;출근시간 : 7:00&#13;&#10;퇴근시간 : 18:04" 
-                    rows="10"></textarea>
+                <div class="col-md-7">
+                    <div class="mt-2 p-3">
+                        <div class="w-100 form-inline">
+                            <label for="search">검색란</label>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input type="text" id="search" class="form-control">
+                            </div>
+                            <button id="sumbit" class="btn btn-primary mb-2">검색</button>
+        
+                            <button onclick="save()" class="btn btn-primary mb-2">저장</button>
+        
+                        </div>
+                        <div class="mt-3">
+                            <label for="logger"><h3>입력</h3></label>
+                            <textarea id="logger" class="form-control" style="resize: none;"
+                            placeholder="{date} 출퇴근보고 &#13;&#10;출근시간 : {checkin}&#13;&#10;퇴근시간 : {checkout}" 
+                            onkeyup="log()" rows="10"></textarea>
+                        </div>
+                        <div class="mt-2">
+                            <label for="result"><h3>결과</h3></label>
+                            <textarea id="result" class="form-control" style="resize: none;"
+                            placeholder="10월 20일 출퇴근보고 &#13;&#10;출근시간 : 7:00&#13;&#10;퇴근시간 : 18:04" 
+                            rows="10"></textarea>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
