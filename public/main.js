@@ -43,6 +43,6 @@ function update(){
 }
 
 $(document).ready(function(){
-    CM.setCometime()
+    CM.init()
     update()
 })
