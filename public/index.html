@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>출퇴근 보고 생성기</title>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="comtimeManager.js"></script>
         <script src="dateFormater.js"></script>
         <script src="main.js"></script>
-        <link rel="stylesheet" href="style.css" >
+        <!-- <link rel="stylesheet" href="style.css" > -->
     </head>
     <body>
-        <div class="leftNav">            
+
+        <!-- <div class="leftNav">            
             <div class="comtime">
                 <h3>출근시간</h3>
                 <input type="text" id="comtime_viewer">
@@ -27,25 +33,33 @@
                 <p>{checkout} : 퇴근 시간을 표시해 줍니다. (기본적으로 현재 시간입니다.) <br> ex : 18:00</p>
 
             </div>
-        </div>
-        <div class="content">
+        </div> -->
+        <div class="container">
+            <div class="mt-2 p-3"></div>
+                <div class="w-100 form-inline">
+                    <label for="search">검색란</label>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" id="search" class="form-control">
+                    </div>
+                    <button id="sumbit" class="btn btn-primary mb-2">검색</button>
 
-            <!-- <div class="search">
-                <label for="search">검색란 : </label>
-                <input type="text" id="search">
-                <button id="sumbit">검색</button>
+                    <button onclick="save()" class="btn btn-primary mb-2">저장</button>
 
-                <button onclick="save()" style="float: right;">저장</button>
-            </div> -->
-            <div class="logger">
-                <textarea id="logger" 
-                placeholder="{date} 출퇴근보고 &#13;&#10;출근시간 : {checkin}&#13;&#10;퇴근시간 : {checkout}" 
-                onkeyup="log()"></textarea>
-            </div>
-            <div class="result">
-                <textarea id="result" 
-                placeholder="10월 20일 출퇴근보고 &#13;&#10;출근시간 : 7:00&#13;&#10;퇴근시간 : 18:04" ></textarea>
+                </div>
+                <div class="mt-3">
+                    <label for="logger"><h3>입력</h3></label>
+                    <textarea id="logger" class="form-control" style="resize: none;"
+                    placeholder="{date} 출퇴근보고 &#13;&#10;출근시간 : {checkin}&#13;&#10;퇴근시간 : {checkout}" 
+                    onkeyup="log()" rows="10"></textarea>
+                </div>
+                <div class="mt-2">
+                    <label for="result"><h3>결과</h3></label>
+                    <textarea id="result" class="form-control" style="resize: none;"
+                    placeholder="10월 20일 출퇴근보고 &#13;&#10;출근시간 : 7:00&#13;&#10;퇴근시간 : 18:04" 
+                    rows="10"></textarea>
+                </div>
             </div>
         </div>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     </body>
 </html>
