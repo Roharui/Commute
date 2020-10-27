@@ -2,7 +2,7 @@
 const CM = {
     
     getComtime(){
-        let comtime = localStorage.getItem("Comtime")
+        let comtime = localStorage.getItem("Cometime")
         let i = parseInt(comtime)
         return new Date(i).format("HH:mm")
     },
@@ -10,15 +10,14 @@ const CM = {
     setCometime(time) {
         if(time != undefined)
         {
-            try{
-                localStorage.setItem("Comtime", new Date("2020-01-01:" + time).getTime())
-            } catch(e) {
-                alert("Invaild date")
-            }
-            return;
+            let date = new Date("2020-01-01:" + time)
+
+            if(date == "Invalid Date"){ alert("Invalid Date"); return;}
+
+            localStorage.setItem("Cometime", date.getTime())
+        } else {
+            localStorage.setItem("Cometime", new Date().getTime())
         }
-            
-        localStorage.setItem("Comtime", new Date().getTime())
     },
 
     timeparse(time) {
