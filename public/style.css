@@ -19,7 +19,7 @@ body {
 }
 
 .logger {
-    width: 500px;
+    width: 50%;
     padding: 10px;
     border: 1px solid black;
     margin: 0 auto;
@@ -27,7 +27,7 @@ body {
 }
 
 .result {
-    width: 500px;
+    width: 50%;
     padding: 10px;
     border: 1px solid black;
     margin: 0 auto;
@@ -75,8 +75,8 @@ body {
 /* 태그 전용 */
 
 textarea {
-    height: 300px;
-    width: 490px;
+    width: 100%;
+    height: 45%;
     resize: none;
 }
 
