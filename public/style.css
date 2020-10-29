@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid black;
+
 }
 
 .search {
@@ -72,12 +72,22 @@ body {
     text-align: center;
 }
 
+.footer {
+    position: absolute;
+    bottom : 20;
+    width: 100%;
+    text-align: center;
+
+}
+
 /* 태그 전용 */
 
 textarea {
     width: 100%;
-    height: 45%;
+    height: 43%;
     resize: none;
+    
+    font-size: larger;
 }
 
 h3 {
