@@ -66,6 +66,11 @@ body {
     margin: 0 auto;
     margin-top: 10px;
     padding: 8px;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    user-select:none;
 }
 
 .manual h3{
@@ -92,4 +97,16 @@ textarea {
 
 h3 {
     margin: 2px;
+}
+
+
+/* span */
+
+span {
+    cursor: pointer;
+}
+
+span:hover {
+    color: lightskyblue;
+    text-decoration: underline;
 }

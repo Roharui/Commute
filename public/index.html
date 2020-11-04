@@ -3,6 +3,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="comtimeManager.js"></script>
         <script src="dateFormater.js"></script>
+        <script src="writeHelper.js"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -20,9 +21,9 @@
             <div class="manual">
                 <h3>메뉴얼</h3>
 
-                <p>{date} : 현재 날짜를 표시해 줍니다. ex : 12월 25일</p>
-                <p>{checkin} : 출근 시간을 표시해 줍니다. ex : 07:00</p>
-                <p>{checkout} : 퇴근 시간을 표시해 줍니다. (기본적으로 현재 시간입니다.)</p>
+                <p><span onclick="writeLog(this)">{date}</span> : 현재 날짜를 표시해 줍니다. ex : 12월 25일</p>
+                <p><span onclick="writeLog(this)">{checkin}</span> : 출근 시간을 표시해 줍니다. ex : 07:00</p>
+                <p><span onclick="writeLog(this)">{checkout}</span> : 퇴근 시간을 표시해 줍니다. (기본적으로 현재 시간입니다.)</p>
 
             </div>
 
@@ -49,7 +50,7 @@
             <div class="result">
                 <textarea id="result" placeholder="10월 20일 출퇴근보고 
 출근시간 : 7:00
-퇴근시간 : 18:04"></textarea>
+퇴근시간 : 18:04" onclick="copy(this)"></textarea>
             </div>
         </div>
     

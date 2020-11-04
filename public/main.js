@@ -24,7 +24,8 @@ function log(){
     let text = $("#logger").val()
     
     Object.keys(changer).forEach(x => {
-        text = text.replace("{" + x + "}", changer[x]())
+        let regex = new RegExp(`{${x}}`, "gi")
+        text = text.replace(regex, changer[x]())
     })
 
     $("#result").val(text)
@@ -40,6 +41,20 @@ function update(){
 
     $("#comtime_viewer").val(comtime)
     log()
+}
+
+function clearSelection()
+{
+ if (window.getSelection) {window.getSelection().removeAllRanges();}
+ else if (document.selection) {document.selection.empty();}
+}
+
+function copy(e){
+    $(e).attr("readonly", false)
+    e.select()
+    document.execCommand("copy")
+    $(e).attr("readonly", true)
+    clearSelection()
 }
 
 $(document).ready(function(){
